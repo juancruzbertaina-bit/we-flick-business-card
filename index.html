@@ -125,23 +125,41 @@
     </section>
 
     <!-- Colores -->
-    <section class="colores">
+    <section class="colores" id="colores">
       <div class="container">
         <h2 class="section-title section-title--center">Elige tu color</h2>
-        <img src="assets/img/f04-colores.jpg" alt="Tres tarjetas We Flick Business Card — negra, violeta y blanca" class="colores__image" />
-        <div class="colores__grid">
-          <div class="colores__item">
-            <span class="swatch swatch--negro"></span>
-            <span>Negro</span>
-          </div>
-          <div class="colores__item">
-            <span class="swatch swatch--blanco"></span>
-            <span>Blanco</span>
-          </div>
-          <div class="colores__item">
-            <span class="swatch swatch--violeta"></span>
-            <span>Violeta</span>
-          </div>
+
+        <div class="colores__stage">
+          <button type="button" class="colores__card colores__card--negro" data-color="negro" aria-label="Ver tarjeta negra">
+            <!-- TODO: reemplazar por <img src="assets/img/f0X-negro.jpg" class="colores__card-img" alt="Tarjeta We Flick negra" /> cuando llegue la foto real -->
+            <span class="colores__mock">
+              <span class="colores__mock-word">flick</span>
+              <span class="colores__mock-sub">we</span>
+              <span class="colores__mock-nfc" aria-hidden="true"></span>
+            </span>
+          </button>
+          <button type="button" class="colores__card colores__card--violeta is-active" data-color="violeta" aria-label="Ver tarjeta violeta">
+            <!-- TODO: reemplazar por <img src="assets/img/f0X-violeta.jpg" class="colores__card-img" alt="Tarjeta We Flick violeta" /> cuando llegue la foto real -->
+            <span class="colores__mock">
+              <span class="colores__mock-word">flick</span>
+              <span class="colores__mock-sub">we</span>
+              <span class="colores__mock-nfc" aria-hidden="true"></span>
+            </span>
+          </button>
+          <button type="button" class="colores__card colores__card--blanco" data-color="blanco" aria-label="Ver tarjeta blanca">
+            <!-- TODO: reemplazar por <img src="assets/img/f0X-blanco.jpg" class="colores__card-img" alt="Tarjeta We Flick blanca" /> cuando llegue la foto real -->
+            <span class="colores__mock">
+              <span class="colores__mock-word">flick</span>
+              <span class="colores__mock-sub">we</span>
+              <span class="colores__mock-nfc" aria-hidden="true"></span>
+            </span>
+          </button>
+        </div>
+
+        <div class="colores__selector" role="group" aria-label="Selector de color">
+          <button type="button" class="colores__swatch swatch--negro" data-color="negro" aria-pressed="false" aria-label="Negro"></button>
+          <button type="button" class="colores__swatch swatch--violeta is-selected" data-color="violeta" aria-pressed="true" aria-label="Violeta"></button>
+          <button type="button" class="colores__swatch swatch--blanco" data-color="blanco" aria-pressed="false" aria-label="Blanco"></button>
         </div>
       </div>
     </section>
