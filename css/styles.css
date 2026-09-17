@@ -117,6 +117,7 @@ ul { padding: 0; margin: 0; list-style: none; }
 .placeholder span { font-weight: 700; color: var(--gray-700); margin-bottom: 4px; }
 .placeholder small { font-size: 0.8rem; max-width: 220px; }
 .placeholder--hero { min-height: 340px; }
+.hero__image { width: 100%; height: auto; border-radius: var(--radius); display: block; }
 .placeholder--wide { min-height: 220px; }
 .placeholder--square { aspect-ratio: 1 / 1; min-height: 0; }
 .placeholder--tall { min-height: 360px; }
