@@ -240,6 +240,7 @@ ul { padding: 0; margin: 0; list-style: none; }
   gap: 48px;
   align-items: start;
 }
+.producto__image { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: var(--radius); display: block; }
 .precio { font-size: 2.2rem; font-weight: 800; color: var(--violet); margin: 0 0 8px; }
 .precio span { font-size: 1rem; font-weight: 500; color: var(--gray-500); }
 .producto__equipos { margin-top: 16px; font-size: 0.9rem; }
