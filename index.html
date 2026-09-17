@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>We Flick Business Card — Comparte tu información profesional con un toque</title>
+  <meta name="description" content="Tarjeta física NFC + QR conectada a un perfil digital editable. Comparte tu contacto, LinkedIn y enlaces con un toque, sin instalar apps." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">we flick</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#que-incluye">Qué incluye</a>
+        <a href="#para-quien">Para quién</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+
+      <div class="header__actions">
+        <!-- TODO: reemplazar por el login real de weflick.es -->
+        <a href="https://weflick.es/login" class="btn btn--ghost">Iniciar sesión</a>
+        <a href="#producto" class="btn btn--primary">Quiero mi Business Card</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <h1>Comparte tu información profesional con un toque.</h1>
+          <p class="hero__subtitle">
+            Tu tarjeta física conectada a un perfil digital que puedes actualizar cuando quieras.
+            NFC + QR + contacto + enlaces, todo en un solo lugar.
+          </p>
+          <div class="hero__ctas">
+            <!-- TODO: reemplazar por el Payment Link real de Stripe -->
+            <a href="#" class="btn btn--primary btn--lg" data-cta="stripe-checkout">Comprar por 19,90 €</a>
+            <a href="#como-funciona" class="btn btn--outline btn--lg">Ver cómo funciona</a>
+          </div>
+          <p class="hero__microcopy">Compatible con iPhone y Android · La otra persona no necesita instalar una app.</p>
+        </div>
+        <div class="hero__visual">
+          <div class="placeholder placeholder--hero" data-id="F01">
+            <span>F01 · Hero principal</span>
+            <small>Tarjeta negra junto a móvil con perfil We Flick abierto</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problema / cambio -->
+    <section class="problema">
+      <div class="container problema__inner">
+        <h2>Tu información cambia. Tu tarjeta no debería quedarse vieja.</h2>
+        <p>
+          Teléfono, puesto, LinkedIn, web, portfolio. Actualiza tu perfil cuando lo necesites
+          y sigue usando la misma tarjeta.
+        </p>
+      </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section class="como-funciona" id="como-funciona">
+      <div class="container">
+        <h2 class="section-title">Cómo funciona</h2>
+        <div class="pasos">
+          <div class="paso">
+            <span class="paso__numero">1</span>
+            <h3>Crea tu perfil</h3>
+            <p>Añade tu foto, descripción, contacto y enlaces profesionales.</p>
+          </div>
+          <div class="paso">
+            <span class="paso__numero">2</span>
+            <h3>Comparte</h3>
+            <p>Acerca la tarjeta al móvil o muestra el QR.</p>
+          </div>
+          <div class="paso">
+            <span class="paso__numero">3</span>
+            <h3>Conecta</h3>
+            <p>La otra persona abre tu perfil y puede guardar tu contacto.</p>
+          </div>
+        </div>
+
+        <div class="como-funciona__visual">
+          <div class="placeholder placeholder--wide" data-id="F07">
+            <span>F07 · Tap NFC</span>
+            <small>Mano acercando tarjeta al teléfono</small>
+          </div>
+          <div class="placeholder placeholder--wide" data-id="F08">
+            <span>F08 · Perfil abierto</span>
+            <small>Primer plano del móvil mostrando perfil real</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Qué incluye -->
+    <section class="que-incluye" id="que-incluye">
+      <div class="container que-incluye__inner">
+        <div class="que-incluye__visual">
+          <div class="placeholder placeholder--square" data-id="F03">
+            <span>F03 · Tarjeta negra trasera</span>
+            <small>Mostrar NFC + QR</small>
+          </div>
+        </div>
+        <div class="que-incluye__lista">
+          <h2 class="section-title">Qué incluye</h2>
+          <ul class="checklist">
+            <li>Tarjeta física NFC.</li>
+            <li>Código QR como alternativa.</li>
+            <li>Perfil digital editable.</li>
+            <li>Foto y descripción.</li>
+            <li>Enlaces profesionales.</li>
+            <li>vCard / guardado de contacto.</li>
+            <li>URL propia para compartir también por WhatsApp, email o LinkedIn.</li>
+            <li>12 meses de acceso al perfil dentro de la oferta de validación.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Colores -->
+    <section class="colores">
+      <div class="container">
+        <h2 class="section-title section-title--center">Elige tu color</h2>
+        <div class="colores__grid">
+          <div class="placeholder placeholder--color" data-id="F04a">
+            <span class="swatch swatch--negro"></span>
+            <span>Negro</span>
+          </div>
+          <div class="placeholder placeholder--color" data-id="F04b">
+            <span class="swatch swatch--blanco"></span>
+            <span>Blanco</span>
+          </div>
+          <div class="placeholder placeholder--color" data-id="F04c">
+            <span class="swatch swatch--violeta"></span>
+            <span>Violeta</span>
+          </div>
+        </div>
+        <p class="colores__nota">F04 · Tres colores frontal — negro, blanco y violeta juntos</p>
+      </div>
+    </section>
+
+    <!-- Para quién -->
+    <section class="para-quien" id="para-quien">
+      <div class="container para-quien__inner">
+        <div class="para-quien__copy">
+          <h2 class="section-title">Hecha para profesionales que conocen gente todos los días.</h2>
+          <ul class="tags">
+            <li>Ventas y desarrollo de negocio</li>
+            <li>Inmobiliarias</li>
+            <li>Consultoría</li>
+            <li>Recruiting</li>
+            <li>Autónomos y profesionales B2B</li>
+            <li>Ferias, congresos y networking</li>
+          </ul>
+        </div>
+        <div class="placeholder placeholder--tall" data-id="F09">
+          <span>F09 · Uso profesional</span>
+          <small>Dos personas en reunión y una utiliza We Flick</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- Producto y precio -->
+    <section class="producto" id="producto">
+      <div class="container producto__inner">
+        <div class="placeholder placeholder--square" data-id="F02">
+          <span>F02 · Tarjeta negra frontal</span>
+          <small>Producto limpio, fondo claro</small>
+        </div>
+
+        <div class="producto__info">
+          <h2 class="section-title">We Flick Business Card</h2>
+          <p class="precio">19,90 € <span>IVA incluido</span></p>
+          <p>Una tarjeta reutilizable conectada a tu perfil digital.</p>
+          <!-- TODO: reemplazar por el Payment Link real de Stripe -->
+          <a href="#" class="btn btn--primary btn--lg" data-cta="stripe-checkout">Comprar ahora</a>
+          <p class="producto__equipos">
+            ¿Necesitas 5 o más?
+            <!-- TODO: reemplazar por el número real de WhatsApp Business -->
+            <a href="https://wa.me/000000000?text=Hola%2C%20quiero%20tarjetas%20We%20Flick%20para%20mi%20equipo" data-cta="whatsapp">Escríbenos por WhatsApp</a>.
+          </p>
+
+          <div class="producto__custom">
+            <h3>We Flick Business Card Custom</h3>
+            <p>Desde 29,90 € · Personalización con logo, nombre y colores de marca. Gestionado por WhatsApp.</p>
+            <!-- TODO: reemplazar por el número real de WhatsApp Business -->
+            <a href="https://wa.me/000000000?text=Hola%2C%20quiero%20una%20tarjeta%20We%20Flick%20personalizada" class="btn btn--outline" data-cta="whatsapp">Consultar Custom</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="preguntas">
+      <div class="container">
+        <h2 class="section-title section-title--center">Preguntas frecuentes</h2>
+        <div class="faq__list">
+
+          <div class="faq__item">
+            <button class="faq__question">
+              ¿La otra persona necesita una app?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>No. El perfil se abre en el navegador del móvil.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question">
+              ¿Funciona si el móvil no usa NFC?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>Sí. El QR permite acceder al mismo perfil.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question">
+              ¿Puedo cambiar mis datos después?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>Sí. Puedes actualizar la información del perfil sin cambiar la tarjeta.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question">
+              ¿Qué puedo añadir al perfil?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>Foto, descripción, enlaces y vCard/contacto.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question">
+              ¿Incluye suscripción?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>La oferta de validación incluye 12 meses de acceso al perfil y no plantea renovación automática.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question">
+              ¿Sirve para equipos?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>Sí, pero durante la prueba los pedidos de 5 o más unidades se gestionan por WhatsApp para adaptar precio y operativa.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Cierre -->
+    <section class="cierre">
+      <div class="container cierre__inner">
+        <h2>Tu próxima presentación puede empezar con un toque.</h2>
+        <div class="cierre__ctas">
+          <!-- TODO: reemplazar por el Payment Link real de Stripe -->
+          <a href="#" class="btn btn--primary btn--lg" data-cta="stripe-checkout">Quiero mi Business Card We Flick</a>
+          <!-- TODO: reemplazar por el número real de WhatsApp Business -->
+          <a href="https://wa.me/000000000?text=Hola%2C%20tengo%20una%20duda%20sobre%20We%20Flick%20Business%20Card" class="btn btn--outline btn--lg" data-cta="whatsapp">Tengo una duda · WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="logo logo--footer">we flick</span>
+      <p>&copy; <span id="year"></span> We Flick. Todos los derechos reservados.</p>
+      <a href="https://weflick.es/login">Iniciar sesión</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
