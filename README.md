@@ -15,7 +15,6 @@ js/main.js         Menú móvil, acordeón de FAQ, año dinámico en footer
 - **Imágenes/videos reales**: reemplazar los bloques placeholder marcados como `F01`–`F11` (ver detalle en el plan de validación) por las fotos y videos reales del producto.
 - **Stripe**: reemplazar los enlaces `href="#"` con `data-cta="stripe-checkout"` por el Payment Link real.
 - **WhatsApp**: reemplazar los enlaces `https://wa.me/000000000...` por el número real de WhatsApp Business.
-- **Login**: confirmar que `https://weflick.es/login` es la URL correcta de inicio de sesión.
 
 ## Cómo previsualizar en local
 
