@@ -144,24 +144,11 @@ ul { padding: 0; margin: 0; list-style: none; }
   gap: 48px;
   align-items: center;
 }
-.hero__copy { position: relative; }
-.hero__swirl {
-  position: absolute;
-  top: -56px;
-  left: -24px;
-  width: 200px;
-  height: auto;
-  opacity: 0.9;
-  z-index: 0;
-  pointer-events: none;
-}
 .hero h1 {
-  position: relative;
-  z-index: 1;
   font-size: clamp(2.2rem, 4.5vw, 3.4rem);
   letter-spacing: -0.02em;
 }
-.hero__subtitle { position: relative; z-index: 1; font-size: 1.15rem; max-width: 480px; }
+.hero__subtitle { font-size: 1.15rem; max-width: 480px; }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
 .hero__microcopy { font-size: 0.85rem; color: var(--gray-500); margin: 0; }
 
