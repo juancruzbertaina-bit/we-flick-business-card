@@ -92,7 +92,7 @@ ul { padding: 0; margin: 0; list-style: none; }
 }
 .logo { display: inline-flex; align-items: center; }
 .logo__img { height: 28px; width: auto; display: block; }
-.logo--footer .logo__img { height: 22px; }
+.logo--footer .logo__img { height: 44px; }
 .nav {
   display: flex;
   gap: 28px;
