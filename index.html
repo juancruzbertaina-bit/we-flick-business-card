@@ -69,44 +69,72 @@
 
     <!-- Cómo funciona -->
     <section class="como-funciona" id="como-funciona">
+      <div class="como-funciona__bg" aria-hidden="true"></div>
       <div class="container">
-        <h2 class="section-title">¿Cómo funciona?</h2>
+        <div class="como-funciona__header" data-reveal>
+          <p class="como-funciona__eyebrow">Así de fácil</p>
+          <h2 class="como-funciona__title">¿Cómo funciona?</h2>
+          <p class="como-funciona__subtitle">De tu tarjeta al contacto guardado en tres pasos.</p>
+        </div>
 
         <div class="pasos-wrap">
-          <svg class="pasos__connector" viewBox="0 0 300 40" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-            <path class="pasos__connector-line" d="M50,20 Q100,2 150,20 Q200,38 250,20" marker-end="url(#pasosArrow)" />
+          <svg class="pasos__connector" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true" focusable="false">
             <defs>
-              <marker id="pasosArrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
-                <path d="M0,0 L7,3.5 L0,7 Z" class="pasos__connector-arrow" />
-              </marker>
+              <linearGradient id="pasosLineGradient" gradientUnits="userSpaceOnUse" x1="50" y1="12" x2="250" y2="12">
+                <stop offset="0%" stop-color="#7F35FC" stop-opacity="0.1" />
+                <stop offset="50%" stop-color="#7F35FC" stop-opacity="0.4" />
+                <stop offset="100%" stop-color="#7F35FC" stop-opacity="0.1" />
+              </linearGradient>
             </defs>
+            <line class="pasos__connector-line" x1="50" y1="12" x2="250" y2="12" />
+            <path class="pasos__connector-chevron" d="M95,7 L101,12 L95,17" />
+            <path class="pasos__connector-chevron" d="M195,7 L201,12 L195,17" />
           </svg>
           <div class="pasos">
             <div class="paso">
               <span class="paso__numero">1</span>
-              <h3>Crea tu perfil</h3>
-              <p>Añade tu foto, descripción, contacto y enlaces profesionales.</p>
+              <h3 class="paso__titulo">Crea tu perfil</h3>
+              <p class="paso__desc">Añade tu foto, descripción, contacto y enlaces profesionales.</p>
             </div>
             <div class="paso">
               <span class="paso__numero">2</span>
-              <h3>Comparte</h3>
-              <p>Acerca la tarjeta al móvil o muestra el QR.</p>
+              <h3 class="paso__titulo">Comparte</h3>
+              <p class="paso__desc">Acerca la tarjeta al móvil o muestra el QR.</p>
             </div>
             <div class="paso">
               <span class="paso__numero">3</span>
-              <h3>Conecta</h3>
-              <p>La otra persona abre tu perfil y puede guardar tu contacto.</p>
+              <h3 class="paso__titulo">Conecta</h3>
+              <p class="paso__desc">La otra persona abre tu perfil y puede guardar tu contacto.</p>
             </div>
           </div>
         </div>
 
         <div class="como-funciona__visual">
-          <div class="como-funciona__photo">
-            <img src="assets/img/f09-tap-nfc.jpg" alt="Persona acercando la tarjeta We Flick al teléfono" class="como-funciona__photo-img" loading="lazy" />
-          </div>
-          <div class="como-funciona__photo">
-            <img src="assets/img/f10-perfil-abierto.jpg" alt="Teléfono mostrando el perfil digital We Flick abierto" class="como-funciona__photo-img" loading="lazy" />
-          </div>
+          <article class="media-card media-card--f07" data-reveal>
+            <div class="media-card__image">
+              <img src="assets/img/f09-tap-nfc.jpg" alt="Persona acercando la tarjeta We Flick al teléfono" class="media-card__img media-card__img--f07" loading="lazy" />
+            </div>
+            <div class="media-card__info">
+              <span class="media-card__badge">NFC</span>
+              <h3 class="media-card__title">Acerca tu tarjeta</h3>
+              <p class="media-card__desc">Comparte tu perfil acercando la We Flick al móvil.</p>
+            </div>
+          </article>
+
+          <svg class="como-funciona__cards-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M3 12h15M12 6l6 6-6 6" />
+          </svg>
+
+          <article class="media-card media-card--f08" data-reveal>
+            <div class="media-card__image">
+              <img src="assets/img/f10-perfil-abierto.jpg" alt="Teléfono mostrando el perfil digital We Flick abierto" class="media-card__img media-card__img--f08" loading="lazy" />
+            </div>
+            <div class="media-card__info">
+              <span class="media-card__badge">Perfil digital</span>
+              <h3 class="media-card__title">Tu información, lista para compartir</h3>
+              <p class="media-card__desc">El perfil se abre en el navegador y permite guardar tu contacto.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>

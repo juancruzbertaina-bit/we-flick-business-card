@@ -85,3 +85,34 @@ if (coloresStage) {
 
   render(selectedColor);
 }
+
+// Cómo funciona — microinteracciones al entrar en viewport
+const comoFunciona = document.querySelector('.como-funciona');
+if (comoFunciona && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const header = comoFunciona.querySelector('.como-funciona__header');
+  const pasosWrap = comoFunciona.querySelector('.pasos-wrap');
+  const pasos = Array.from(comoFunciona.querySelectorAll('.paso'));
+  const cards = Array.from(comoFunciona.querySelectorAll('.media-card'));
+
+  const revealEls = [header, ...pasos, ...cards].filter(Boolean);
+  revealEls.forEach((el) => el.classList.add('reveal'));
+  pasos.forEach((el, i) => { el.style.transitionDelay = `${i * 90}ms`; });
+  cards.forEach((el, i) => { el.style.transitionDelay = `${i * 100}ms`; });
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    revealEls.forEach((el) => observer.observe(el));
+    if (pasosWrap) observer.observe(pasosWrap);
+  } else {
+    revealEls.forEach((el) => el.classList.add('is-visible'));
+    if (pasosWrap) pasosWrap.classList.add('is-visible');
+  }
+}
