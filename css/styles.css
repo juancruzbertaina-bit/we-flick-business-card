@@ -151,11 +151,46 @@ ul { padding: 0; margin: 0; list-style: none; }
 
 /* Como funciona */
 .como-funciona { padding: 80px 0; }
+.como-funciona .container { max-width: 1200px; }
+.como-funciona .section-title { margin-bottom: 0; }
+
+.pasos-wrap {
+  position: relative;
+  margin: 44px 0 52px;
+}
+.pasos__connector {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  transform: translateY(-50%);
+  overflow: visible;
+  pointer-events: none;
+  z-index: 0;
+}
+.pasos__connector-line {
+  fill: none;
+  stroke: var(--violet);
+  stroke-opacity: 0.28;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.pasos__connector-arrow { fill: var(--violet); fill-opacity: 0.28; }
+
 .pasos {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  margin: 32px 0 48px;
+}
+.paso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 12px;
 }
 .paso__numero {
   display: inline-flex;
@@ -168,10 +203,30 @@ ul { padding: 0; margin: 0; list-style: none; }
   color: var(--white);
   font-weight: 700;
   margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
 }
 .paso h3 { margin-bottom: 8px; }
 .paso p { margin: 0; }
-.como-funciona__visual { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+.como-funciona__visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 52px;
+}
+.como-funciona__photo {
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--gray-100);
+}
+.como-funciona__photo-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* Qué incluye */
 .que-incluye { background: var(--gray-50); padding: 80px 0; }
@@ -406,7 +461,6 @@ ul { padding: 0; margin: 0; list-style: none; }
 /* Responsive */
 @media (max-width: 900px) {
   .hero__inner,
-  .como-funciona__visual,
   .que-incluye__inner,
   .para-quien__inner,
   .producto__inner {
@@ -414,10 +468,53 @@ ul { padding: 0; margin: 0; list-style: none; }
   }
   .para-quien__inner .placeholder,
   .hero__visual .placeholder { order: -1; }
-  .pasos { grid-template-columns: 1fr; }
+  .pasos-wrap { margin: 36px 0 44px; }
+  .pasos { gap: 20px; }
+  .como-funciona__visual { gap: 16px; margin-top: 44px; }
 }
 
 @media (max-width: 720px) {
+  .pasos-wrap { margin: 32px 0 40px; }
+  .pasos__connector { display: none; }
+  .pasos {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .paso {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-template-areas:
+      "num h3"
+      "line p";
+    align-items: start;
+    column-gap: 16px;
+    text-align: left;
+    padding: 0;
+  }
+  .paso:not(:last-child) { padding-bottom: 8px; }
+  .paso__numero { grid-area: num; margin-bottom: 0; }
+  .paso h3 { grid-area: h3; align-self: center; margin-bottom: 0; }
+  .paso p { grid-area: p; margin-top: 8px; }
+  .paso:not(:last-child)::after {
+    content: '';
+    grid-area: line;
+    justify-self: center;
+    align-self: stretch;
+    width: 2px;
+    min-height: 24px;
+    margin: 6px 0;
+    background: linear-gradient(to bottom, var(--violet) 0%, var(--violet) 100%);
+    opacity: 0.28;
+    border-radius: 1px;
+  }
+  .paso:last-child { grid-template-areas: "num h3" ". p"; }
+
+  .como-funciona__visual {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
   .nav {
     position: absolute;
     top: 100%;

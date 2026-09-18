@@ -70,33 +70,42 @@
     <!-- Cómo funciona -->
     <section class="como-funciona" id="como-funciona">
       <div class="container">
-        <h2 class="section-title">Cómo funciona</h2>
-        <div class="pasos">
-          <div class="paso">
-            <span class="paso__numero">1</span>
-            <h3>Crea tu perfil</h3>
-            <p>Añade tu foto, descripción, contacto y enlaces profesionales.</p>
-          </div>
-          <div class="paso">
-            <span class="paso__numero">2</span>
-            <h3>Comparte</h3>
-            <p>Acerca la tarjeta al móvil o muestra el QR.</p>
-          </div>
-          <div class="paso">
-            <span class="paso__numero">3</span>
-            <h3>Conecta</h3>
-            <p>La otra persona abre tu perfil y puede guardar tu contacto.</p>
+        <h2 class="section-title">¿Cómo funciona?</h2>
+
+        <div class="pasos-wrap">
+          <svg class="pasos__connector" viewBox="0 0 300 40" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path class="pasos__connector-line" d="M50,20 Q100,2 150,20 Q200,38 250,20" marker-end="url(#pasosArrow)" />
+            <defs>
+              <marker id="pasosArrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+                <path d="M0,0 L7,3.5 L0,7 Z" class="pasos__connector-arrow" />
+              </marker>
+            </defs>
+          </svg>
+          <div class="pasos">
+            <div class="paso">
+              <span class="paso__numero">1</span>
+              <h3>Crea tu perfil</h3>
+              <p>Añade tu foto, descripción, contacto y enlaces profesionales.</p>
+            </div>
+            <div class="paso">
+              <span class="paso__numero">2</span>
+              <h3>Comparte</h3>
+              <p>Acerca la tarjeta al móvil o muestra el QR.</p>
+            </div>
+            <div class="paso">
+              <span class="paso__numero">3</span>
+              <h3>Conecta</h3>
+              <p>La otra persona abre tu perfil y puede guardar tu contacto.</p>
+            </div>
           </div>
         </div>
 
         <div class="como-funciona__visual">
-          <div class="placeholder placeholder--wide" data-id="F07">
-            <span>F07 · Tap NFC</span>
-            <small>Mano acercando tarjeta al teléfono</small>
+          <div class="como-funciona__photo">
+            <!-- TODO: reemplazar por <img src="assets/img/f09-tap-nfc.jpg" alt="Persona acercando la tarjeta We Flick al teléfono" class="como-funciona__photo-img" /> cuando llegue la foto real -->
           </div>
-          <div class="placeholder placeholder--wide" data-id="F08">
-            <span>F08 · Perfil abierto</span>
-            <small>Primer plano del móvil mostrando perfil real</small>
+          <div class="como-funciona__photo">
+            <!-- TODO: reemplazar por <img src="assets/img/f10-perfil-abierto.jpg" alt="Teléfono mostrando el perfil digital We Flick abierto" class="como-funciona__photo-img" /> cuando llegue la foto real -->
           </div>
         </div>
       </div>
