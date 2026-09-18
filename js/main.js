@@ -30,19 +30,35 @@ document.querySelectorAll('.faq__item').forEach((item) => {
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // Selector de color interactivo (sección "Elige tu color")
+// El carrusel se controla únicamente desde los círculos de color:
+// la tarjeta del color elegido siempre queda al centro, y las otras
+// dos giran a los costados manteniendo el orden circular del selector.
 const coloresStage = document.querySelector('.colores__stage');
 if (coloresStage) {
-  const cards = Array.from(coloresStage.querySelectorAll('.colores__card'));
+  const order = ['negro', 'violeta', 'blanco'];
+  const cardsByColor = {};
+  order.forEach((color) => {
+    cardsByColor[color] = coloresStage.querySelector(`.colores__card--${color}`);
+  });
   const swatches = Array.from(document.querySelectorAll('.colores__swatch'));
-  let selectedColor = document.querySelector('.colores__swatch.is-selected')?.dataset.color || null;
+  let selectedColor = document.querySelector('.colores__swatch.is-selected')?.dataset.color || order[0];
 
   const render = (color) => {
-    coloresStage.classList.toggle('has-active', Boolean(color));
-    cards.forEach((card) => {
-      card.classList.toggle('is-active', card.dataset.color === color);
+    const centerIndex = order.indexOf(color);
+    const leftIndex = (centerIndex - 1 + order.length) % order.length;
+    const rightIndex = (centerIndex + 1) % order.length;
+
+    order.forEach((c, i) => {
+      const card = cardsByColor[c];
+      if (!card) return;
+      card.classList.remove('colores__card--pos-center', 'colores__card--pos-left', 'colores__card--pos-right');
+      if (i === centerIndex) card.classList.add('colores__card--pos-center');
+      else if (i === leftIndex) card.classList.add('colores__card--pos-left');
+      else if (i === rightIndex) card.classList.add('colores__card--pos-right');
     });
+
     swatches.forEach((swatch) => {
-      const isSelected = swatch.dataset.color === selectedColor;
+      const isSelected = swatch.dataset.color === color;
       swatch.classList.toggle('is-selected', isSelected);
       swatch.setAttribute('aria-pressed', String(isSelected));
     });
@@ -62,12 +78,6 @@ if (coloresStage) {
     swatch.addEventListener('focus', () => previewColor(swatch.dataset.color));
     swatch.addEventListener('blur', resetPreview);
     swatch.addEventListener('click', () => selectColor(swatch.dataset.color));
-  });
-
-  cards.forEach((card) => {
-    card.addEventListener('mouseenter', () => previewColor(card.dataset.color));
-    card.addEventListener('mouseleave', resetPreview);
-    card.addEventListener('click', () => selectColor(card.dataset.color));
   });
 
   render(selectedColor);

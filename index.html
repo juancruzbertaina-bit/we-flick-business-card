@@ -129,33 +129,34 @@
       <div class="container">
         <h2 class="section-title section-title--center">Elige tu color</h2>
 
-        <div class="colores__stage">
-          <button type="button" class="colores__card colores__card--negro" data-color="negro" aria-label="Ver tarjeta negra">
+        <div class="colores__stage" aria-live="polite">
+          <div class="colores__card colores__card--negro colores__card--pos-center" data-color="negro">
             <img src="assets/img/f06-negro.jpg" class="colores__card-img" alt="Tarjeta We Flick negra" />
-          </button>
-          <button type="button" class="colores__card colores__card--violeta is-active" data-color="violeta" aria-label="Ver tarjeta violeta">
+          </div>
+          <div class="colores__card colores__card--violeta colores__card--pos-right" data-color="violeta">
             <!-- TODO: reemplazar por <img src="assets/img/f0X-violeta.jpg" class="colores__card-img" alt="Tarjeta We Flick violeta" /> cuando llegue la foto real -->
             <span class="colores__mock">
               <span class="colores__mock-word">flick</span>
               <span class="colores__mock-sub">we</span>
               <span class="colores__mock-nfc" aria-hidden="true"></span>
             </span>
-          </button>
-          <button type="button" class="colores__card colores__card--blanco" data-color="blanco" aria-label="Ver tarjeta blanca">
+          </div>
+          <div class="colores__card colores__card--blanco colores__card--pos-left" data-color="blanco">
             <!-- TODO: reemplazar por <img src="assets/img/f0X-blanco.jpg" class="colores__card-img" alt="Tarjeta We Flick blanca" /> cuando llegue la foto real -->
             <span class="colores__mock">
               <span class="colores__mock-word">flick</span>
               <span class="colores__mock-sub">we</span>
               <span class="colores__mock-nfc" aria-hidden="true"></span>
             </span>
-          </button>
+          </div>
         </div>
 
         <div class="colores__selector" role="group" aria-label="Selector de color">
-          <button type="button" class="colores__swatch swatch--negro" data-color="negro" aria-pressed="false" aria-label="Negro"></button>
-          <button type="button" class="colores__swatch swatch--violeta is-selected" data-color="violeta" aria-pressed="true" aria-label="Violeta"></button>
+          <button type="button" class="colores__swatch swatch--negro is-selected" data-color="negro" aria-pressed="true" aria-label="Negro"></button>
+          <button type="button" class="colores__swatch swatch--violeta" data-color="violeta" aria-pressed="false" aria-label="Violeta"></button>
           <button type="button" class="colores__swatch swatch--blanco" data-color="blanco" aria-pressed="false" aria-label="Blanco"></button>
         </div>
+        <p class="colores__label">Selecciona tu color</p>
       </div>
     </section>
 
