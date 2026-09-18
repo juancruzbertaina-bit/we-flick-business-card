@@ -188,3 +188,20 @@ if (perfiles) {
   goTo(0);
   startAutoplay();
 }
+
+// WhatsApp flotante — expandir etiqueta al cargar y contraerla tras ~4s
+const whatsappFloat = document.querySelector('[data-whatsapp-float]');
+if (whatsappFloat) {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) {
+    // Sin animación: mantener contraído por defecto (hover/focus sigue funcionando por CSS)
+  } else {
+    // Pequeño retardo para que se perciba la entrada suave
+    window.setTimeout(() => {
+      whatsappFloat.classList.add('is-expanded');
+      window.setTimeout(() => {
+        whatsappFloat.classList.remove('is-expanded');
+      }, 4000);
+    }, 600);
+  }
+}
