@@ -131,8 +131,8 @@ ul { padding: 0; margin: 0; list-style: none; }
 .hero { padding: 64px 0 80px; }
 .hero__inner {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 0.95fr 1.2fr;
+  gap: 40px;
   align-items: center;
 }
 .hero h1 {
@@ -144,7 +144,7 @@ ul { padding: 0; margin: 0; list-style: none; }
 .hero__microcopy { font-size: 0.85rem; color: var(--gray-500); margin: 0; }
 
 /* Problema */
-.problema { background: var(--black); color: var(--white); padding: 72px 0; }
+.problema { background: var(--black); color: var(--white); padding: 72px 0 48px; }
 .problema__inner { max-width: 720px; margin: 0 auto; text-align: center; }
 .problema h2 { color: var(--white); font-size: clamp(1.6rem, 3.4vw, 2.3rem); }
 .problema p { color: var(--gray-300); margin: 0; }
@@ -152,7 +152,7 @@ ul { padding: 0; margin: 0; list-style: none; }
 /* Como funciona */
 .como-funciona {
   position: relative;
-  padding: 104px 0 120px;
+  padding: 64px 0 80px;
   background: #FAF9FC;
   overflow: hidden;
 }
@@ -172,11 +172,11 @@ ul { padding: 0; margin: 0; list-style: none; }
 /* Cabecera */
 .como-funciona__header {
   max-width: 620px;
-  margin: 0 auto clamp(52px, 6vw, 64px);
+  margin: 0 auto clamp(32px, 4vw, 40px);
   text-align: center;
 }
 .como-funciona__eyebrow {
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -184,7 +184,7 @@ ul { padding: 0; margin: 0; list-style: none; }
   color: var(--violet);
 }
 .como-funciona__title {
-  margin: 0 0 16px;
+  margin: 0 0 12px;
   font-size: clamp(2.125rem, 5vw, 3.25rem);
   font-weight: 700;
   line-height: 1.1;
@@ -257,12 +257,12 @@ ul { padding: 0; margin: 0; list-style: none; }
   color: var(--white);
   font-weight: 600;
   font-size: 1.05rem;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   position: relative;
   z-index: 1;
 }
 .paso__titulo {
-  margin: 0 0 8px;
+  margin: 0 0 6px;
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--black);
@@ -281,7 +281,7 @@ ul { padding: 0; margin: 0; list-style: none; }
   display: grid;
   grid-template-columns: 58fr 42fr;
   gap: 24px;
-  margin-top: 64px;
+  margin-top: 40px;
   align-items: stretch;
 }
 .como-funciona__cards-arrow {
@@ -322,7 +322,7 @@ ul { padding: 0; margin: 0; list-style: none; }
 .media-card__image {
   position: relative;
   width: 100%;
-  height: 360px;
+  height: 330px;
   overflow: hidden;
   background: var(--gray-100);
 }
@@ -388,8 +388,16 @@ ul { padding: 0; margin: 0; list-style: none; }
   .como-funciona__cards-arrow { display: block; }
 }
 
+@media (min-width: 1024px) {
+  .problema__inner { max-width: 1000px; }
+  .problema h2 {
+    font-size: 2rem;
+    letter-spacing: -0.01em;
+  }
+}
+
 /* Qué incluye */
-.que-incluye { background: var(--gray-50); padding: 80px 0; }
+.que-incluye { background: var(--gray-50); padding: 48px 0 40px; }
 .que-incluye__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -412,7 +420,7 @@ ul { padding: 0; margin: 0; list-style: none; }
 .que-incluye__image { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: var(--radius); display: block; }
 
 /* Colores */
-.colores { padding: clamp(32px, 6vh, 64px) 0; text-align: center; overflow-x: hidden; }
+.colores { padding: clamp(24px, 4vh, 40px) 0 clamp(32px, 6vh, 64px); text-align: center; overflow-x: hidden; }
 .colores .section-title { margin-bottom: clamp(16px, 3vh, 32px); }
 
 .colores__stage {
@@ -532,7 +540,7 @@ ul { padding: 0; margin: 0; list-style: none; }
 }
 
 /* Para quién */
-.para-quien { padding: 80px 0; }
+.para-quien { padding: 64px 0 56px; }
 .para-quien__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -549,7 +557,7 @@ ul { padding: 0; margin: 0; list-style: none; }
 }
 
 /* Producto */
-.producto { background: var(--gray-50); padding: 80px 0; }
+.producto { background: var(--gray-50); padding: 48px 0 64px; }
 .producto__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -569,7 +577,7 @@ ul { padding: 0; margin: 0; list-style: none; }
 .producto__custom h3 { margin-bottom: 8px; }
 
 /* FAQ */
-.faq { padding: 80px 0; }
+.faq { padding: 40px 0 80px; }
 .faq__list { max-width: 720px; margin: 32px auto 0; }
 .faq__item { border-bottom: 1px solid var(--gray-100); }
 .faq__question {
@@ -629,20 +637,20 @@ ul { padding: 0; margin: 0; list-style: none; }
   .para-quien__inner .placeholder,
   .hero__visual .placeholder { order: -1; }
 
-  .como-funciona { padding: 88px 0 96px; }
+  .como-funciona { padding: 56px 0 64px; }
   .pasos { gap: 20px; }
   .como-funciona__visual {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
-    margin-top: 48px;
+    margin-top: 36px;
   }
   .como-funciona__cards-arrow { display: none; }
   .media-card__image { height: 300px; }
 }
 
 @media (max-width: 720px) {
-  .como-funciona { padding: 72px 0 80px; }
-  .como-funciona__header { margin-bottom: 40px; }
+  .como-funciona { padding: 44px 0 56px; }
+  .como-funciona__header { margin-bottom: 28px; }
   .pasos__connector { display: none; }
   .pasos {
     grid-template-columns: 1fr;
@@ -680,7 +688,7 @@ ul { padding: 0; margin: 0; list-style: none; }
   .como-funciona__visual {
     grid-template-columns: 1fr;
     gap: 20px;
-    margin-top: 40px;
+    margin-top: 28px;
   }
   .media-card__image { height: clamp(260px, 62vw, 300px); }
 
