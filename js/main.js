@@ -29,58 +29,52 @@ document.querySelectorAll('.faq__item').forEach((item) => {
 // Año en el footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Selector de color interactivo (sección "Elige tu color")
-// El carrusel se controla únicamente desde los círculos de color:
-// la tarjeta del color elegido siempre queda al centro, y las otras
-// dos giran a los costados manteniendo el orden circular del selector.
-const coloresStage = document.querySelector('.colores__stage');
-if (coloresStage) {
-  // Orden circular del carrusel (no es el orden visual del selector):
-  // define quién queda a la izquierda/derecha de cada color centrado.
-  // Con "negro" centrado, "violeta" cae a la izquierda y "blanco" a la derecha.
-  const order = ['violeta', 'negro', 'blanco'];
-  const cardsByColor = {};
-  order.forEach((color) => {
-    cardsByColor[color] = coloresStage.querySelector(`.colores__card--${color}`);
-  });
-  const swatches = Array.from(document.querySelectorAll('.colores__swatch'));
-  let selectedColor = document.querySelector('.colores__swatch.is-selected')?.dataset.color || 'negro';
+// Selector de color (sección "Una We Flick. Tres colores.")
+const coloresSection = document.querySelector('[data-colores]');
+if (coloresSection) {
+  const variants = {
+    negro:   { name: 'Negro',   desc: 'Sobria, minimal y profesional.',        src: 'assets/img/f06-negro.jpg',   alt: 'Tarjeta We Flick negra, frente y dorso' },
+    violeta: { name: 'Violeta', desc: 'El color más reconocible de We Flick.', src: 'assets/img/f07-violeta.jpg', alt: 'Tarjeta We Flick violeta, frente y dorso' },
+    blanco:  { name: 'Blanco',  desc: 'Limpia, luminosa y versátil.',          src: 'assets/img/f08-blanco.jpg',  alt: 'Tarjeta We Flick blanca, frente y dorso' }
+  };
+  const pills = Array.from(coloresSection.querySelectorAll('.colores__pill'));
+  const image = coloresSection.querySelector('[data-colores-image]');
+  const nameEl = coloresSection.querySelector('[data-colores-name]');
+  const descEl = coloresSection.querySelector('[data-colores-desc]');
+  const modifiers = ['colores--negro', 'colores--violeta', 'colores--blanco'];
+  let selectedColor = coloresSection.querySelector('.colores__pill.is-selected')?.dataset.color || 'negro';
 
   const render = (color) => {
-    const centerIndex = order.indexOf(color);
-    const leftIndex = (centerIndex - 1 + order.length) % order.length;
-    const rightIndex = (centerIndex + 1) % order.length;
-
-    order.forEach((c, i) => {
-      const card = cardsByColor[c];
-      if (!card) return;
-      card.classList.remove('colores__card--pos-center', 'colores__card--pos-left', 'colores__card--pos-right');
-      if (i === centerIndex) card.classList.add('colores__card--pos-center');
-      else if (i === leftIndex) card.classList.add('colores__card--pos-left');
-      else if (i === rightIndex) card.classList.add('colores__card--pos-right');
-    });
-
-    swatches.forEach((swatch) => {
-      const isSelected = swatch.dataset.color === color;
-      swatch.classList.toggle('is-selected', isSelected);
-      swatch.setAttribute('aria-pressed', String(isSelected));
+    const v = variants[color];
+    if (!v) return;
+    // Fondo reactivo
+    modifiers.forEach((m) => coloresSection.classList.remove(m));
+    coloresSection.classList.add(`colores--${color}`);
+    // Texto
+    nameEl.textContent = v.name;
+    descEl.textContent = v.desc;
+    // Imagen con transición suave
+    if (image.getAttribute('src') !== v.src) {
+      image.classList.add('is-swapping');
+      window.setTimeout(() => {
+        image.src = v.src;
+        image.alt = v.alt;
+        image.classList.remove('is-swapping');
+      }, 200);
+    }
+    // Estado del selector
+    pills.forEach((p) => {
+      const on = p.dataset.color === color;
+      p.classList.toggle('is-selected', on);
+      p.setAttribute('aria-pressed', String(on));
     });
   };
 
-  const selectColor = (color) => {
-    selectedColor = color;
-    render(color);
-  };
-
-  const previewColor = (color) => render(color);
-  const resetPreview = () => render(selectedColor);
-
-  swatches.forEach((swatch) => {
-    swatch.addEventListener('mouseenter', () => previewColor(swatch.dataset.color));
-    swatch.addEventListener('mouseleave', resetPreview);
-    swatch.addEventListener('focus', () => previewColor(swatch.dataset.color));
-    swatch.addEventListener('blur', resetPreview);
-    swatch.addEventListener('click', () => selectColor(swatch.dataset.color));
+  pills.forEach((p) => {
+    p.addEventListener('click', () => {
+      selectedColor = p.dataset.color;
+      render(selectedColor);
+    });
   });
 
   render(selectedColor);

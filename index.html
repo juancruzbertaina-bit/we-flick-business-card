@@ -161,26 +161,43 @@
     </section>
 
     <!-- Colores -->
-    <section class="colores" id="colores">
-      <div class="container">
-        <h2 class="section-title section-title--center">Elige tu color</h2>
+    <section class="colores colores--negro" id="colores" data-colores>
+      <span class="colores__halo" aria-hidden="true"></span>
+      <div class="container colores__inner">
+        <div class="colores__copy">
+          <h2 class="section-title">Una We Flick. Tres colores.</h2>
+          <p class="colores__subtitle">Elige la que más encaja con vos.</p>
 
-        <div class="colores__stage" aria-live="polite">
-          <div class="colores__card colores__card--negro colores__card--pos-center" data-color="negro">
-            <img src="assets/img/f06-negro.jpg" class="colores__card-img" alt="Tarjeta We Flick negra, frente y dorso" />
+          <div class="colores__meta" aria-live="polite">
+            <p class="colores__name" data-colores-name>Negro</p>
+            <p class="colores__desc" data-colores-desc>Sobria, minimal y profesional.</p>
           </div>
-          <div class="colores__card colores__card--violeta colores__card--pos-left" data-color="violeta">
-            <img src="assets/img/f07-violeta.jpg" class="colores__card-img" alt="Tarjeta We Flick violeta, frente y dorso" />
-          </div>
-          <div class="colores__card colores__card--blanco colores__card--pos-right" data-color="blanco">
-            <img src="assets/img/f08-blanco.jpg" class="colores__card-img" alt="Tarjeta We Flick blanca, frente y dorso" />
+
+          <div class="colores__selector" role="group" aria-label="Selector de color">
+            <button type="button" class="colores__pill is-selected" data-color="negro" aria-pressed="true" aria-label="Seleccionar tarjeta negra">
+              <span class="colores__pill-swatch swatch--negro" aria-hidden="true"></span>
+              <span class="colores__pill-name">Negro</span>
+            </button>
+            <button type="button" class="colores__pill" data-color="violeta" aria-pressed="false" aria-label="Seleccionar tarjeta violeta">
+              <span class="colores__pill-swatch swatch--violeta" aria-hidden="true"></span>
+              <span class="colores__pill-name">Violeta</span>
+            </button>
+            <button type="button" class="colores__pill" data-color="blanco" aria-pressed="false" aria-label="Seleccionar tarjeta blanca">
+              <span class="colores__pill-swatch swatch--blanco" aria-hidden="true"></span>
+              <span class="colores__pill-name">Blanco</span>
+            </button>
           </div>
         </div>
 
-        <div class="colores__selector" role="group" aria-label="Selector de color">
-          <button type="button" class="colores__swatch swatch--negro is-selected" data-color="negro" aria-pressed="true" aria-label="Negro"></button>
-          <button type="button" class="colores__swatch swatch--violeta" data-color="violeta" aria-pressed="false" aria-label="Violeta"></button>
-          <button type="button" class="colores__swatch swatch--blanco" data-color="blanco" aria-pressed="false" aria-label="Blanco"></button>
+        <div class="colores__visual">
+          <img
+            src="assets/img/f06-negro.jpg"
+            alt="Tarjeta We Flick negra, frente y dorso"
+            class="colores__image"
+            data-colores-image
+            width="1600"
+            height="1200"
+          />
         </div>
       </div>
     </section>
