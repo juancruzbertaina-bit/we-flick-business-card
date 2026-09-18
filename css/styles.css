@@ -201,11 +201,11 @@ ul { padding: 0; margin: 0; list-style: none; }
 .colores .section-title { margin-bottom: clamp(16px, 3vh, 32px); }
 
 .colores__stage {
-  --card-w: clamp(150px, 30vw, 320px);
-  --offset: clamp(92px, 24vw, 230px);
+  --card-w: clamp(165px, 34vw, 420px);
+  --offset: clamp(95px, 26vw, 260px);
   position: relative;
-  height: clamp(180px, 27vw, 320px);
-  max-width: 980px;
+  height: clamp(200px, 30vw, 340px);
+  max-width: 1080px;
   margin: 0 auto;
   perspective: 1400px;
 }
@@ -215,7 +215,7 @@ ul { padding: 0; margin: 0; list-style: none; }
   top: 50%;
   left: 50%;
   width: var(--card-w);
-  aspect-ratio: 1.586 / 1;
+  aspect-ratio: 1.432 / 1;
   border: none;
   border-radius: 14px;
   padding: 0;
@@ -314,13 +314,6 @@ ul { padding: 0; margin: 0; list-style: none; }
 .colores__swatch.is-selected {
   box-shadow: 0 0 0 2px var(--white), 0 0 0 4px var(--violet);
   transform: scale(1.12);
-}
-
-.colores__label {
-  margin: 10px 0 0;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--gray-700);
 }
 
 /* Para quién */

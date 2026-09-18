@@ -35,13 +35,16 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // dos giran a los costados manteniendo el orden circular del selector.
 const coloresStage = document.querySelector('.colores__stage');
 if (coloresStage) {
-  const order = ['negro', 'violeta', 'blanco'];
+  // Orden circular del carrusel (no es el orden visual del selector):
+  // define quién queda a la izquierda/derecha de cada color centrado.
+  // Con "negro" centrado, "violeta" cae a la izquierda y "blanco" a la derecha.
+  const order = ['violeta', 'negro', 'blanco'];
   const cardsByColor = {};
   order.forEach((color) => {
     cardsByColor[color] = coloresStage.querySelector(`.colores__card--${color}`);
   });
   const swatches = Array.from(document.querySelectorAll('.colores__swatch'));
-  let selectedColor = document.querySelector('.colores__swatch.is-selected')?.dataset.color || order[0];
+  let selectedColor = document.querySelector('.colores__swatch.is-selected')?.dataset.color || 'negro';
 
   const render = (color) => {
     const centerIndex = order.indexOf(color);
