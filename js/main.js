@@ -116,3 +116,75 @@ if (comoFunciona && !window.matchMedia('(prefers-reduced-motion: reduce)').match
     if (pasosWrap) pasosWrap.classList.add('is-visible');
   }
 }
+
+// Para quién — carrusel de perfiles + categorías clicables
+const perfiles = document.querySelector('[data-perfiles]');
+if (perfiles) {
+  const track = perfiles.querySelector('[data-track]');
+  const slides = Array.from(perfiles.querySelectorAll('.perfiles__slide'));
+  const dots = Array.from(perfiles.querySelectorAll('.perfiles__dot'));
+  const prevBtn = perfiles.querySelector('[data-prev]');
+  const nextBtn = perfiles.querySelector('[data-next]');
+  const pillButtons = Array.from(document.querySelectorAll('.tags__btn'));
+  const total = slides.length;
+  let current = 0;
+  let autoplayTimer = null;
+  const AUTOPLAY_MS = 4000;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Sizing: track = N * 100%, each slide = 100/N %
+  track.style.width = `${total * 100}%`;
+  slides.forEach((slide) => { slide.style.width = `${100 / total}%`; });
+
+  const updatePills = () => {
+    const activeSlideNumber = String(current + 1);
+    pillButtons.forEach((btn) => {
+      btn.classList.toggle('is-active', btn.dataset.slideTarget === activeSlideNumber);
+    });
+  };
+
+  const goTo = (index) => {
+    current = (index + total) % total;
+    track.style.transform = `translateX(-${current * (100 / total)}%)`;
+    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === current));
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('is-active', i === current);
+      dot.setAttribute('aria-selected', String(i === current));
+    });
+    updatePills();
+  };
+
+  const next = () => goTo(current + 1);
+  const prev = () => goTo(current - 1);
+
+  const stopAutoplay = () => {
+    if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
+  };
+  const startAutoplay = () => {
+    stopAutoplay();
+    if (prefersReducedMotion) return;
+    autoplayTimer = setInterval(next, AUTOPLAY_MS);
+  };
+
+  if (prevBtn) prevBtn.addEventListener('click', () => { prev(); startAutoplay(); });
+  if (nextBtn) nextBtn.addEventListener('click', () => { next(); startAutoplay(); });
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => { goTo(i); startAutoplay(); });
+  });
+  pillButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const target = parseInt(btn.dataset.slideTarget, 10) - 1;
+      if (!Number.isNaN(target)) { goTo(target); startAutoplay(); }
+    });
+  });
+
+  perfiles.addEventListener('mouseenter', stopAutoplay);
+  perfiles.addEventListener('mouseleave', startAutoplay);
+  perfiles.addEventListener('focusin', stopAutoplay);
+  perfiles.addEventListener('focusout', (e) => {
+    if (!perfiles.contains(e.relatedTarget)) startAutoplay();
+  });
+
+  goTo(0);
+  startAutoplay();
+}

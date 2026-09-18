@@ -44,8 +44,7 @@
             NFC + QR + contacto + enlaces, todo en un solo lugar.
           </p>
           <div class="hero__ctas">
-            <!-- TODO: reemplazar por el Payment Link real de Stripe -->
-            <a href="#" class="btn btn--primary btn--lg" data-cta="stripe-checkout">Comprar por 19,90 €</a>
+            <a href="https://buy.stripe.com/fZu28rfyUb3SdbM4NP93y0X" class="btn btn--primary btn--lg" data-cta="stripe-checkout" target="_blank" rel="noopener">Comprar por 19,90 €</a>
             <a href="#como-funciona" class="btn btn--outline btn--lg">Ver cómo funciona</a>
           </div>
           <p class="hero__microcopy">Compatible con iPhone y Android · La otra persona no necesita instalar una app.</p>
@@ -192,18 +191,112 @@
         <div class="para-quien__copy">
           <h2 class="section-title">Hecha para profesionales que conocen gente todos los días.</h2>
           <ul class="tags">
-            <li>Ventas y desarrollo de negocio</li>
-            <li>Inmobiliarias</li>
-            <li>Consultoría</li>
-            <li>Recruiting</li>
-            <li>Autónomos y profesionales B2B</li>
-            <li>Ferias, congresos y networking</li>
-            <li title="Comparte tu contacto y redes con las personas que conoces durante cada recorrido.">Guías de free tours</li>
+            <li><button type="button" class="tags__btn" data-slide-target="5">Ventas y desarrollo de negocio</button></li>
+            <li><button type="button" class="tags__btn" data-slide-target="1">Inmobiliarias</button></li>
+            <li><button type="button" class="tags__btn" data-slide-target="2">Consultoría</button></li>
+            <li><button type="button" class="tags__btn" data-slide-target="3">Recruiting</button></li>
+            <li><button type="button" class="tags__btn" data-slide-target="5">Autónomos y profesionales B2B</button></li>
+            <li><button type="button" class="tags__btn" data-slide-target="3">Ferias, congresos y networking</button></li>
+            <li><button type="button" class="tags__btn" data-slide-target="4" title="Comparte tu contacto y redes con las personas que conoces durante cada recorrido.">Guías de free tours</button></li>
           </ul>
         </div>
-        <div class="placeholder placeholder--tall" data-id="F09">
-          <span>F09 · Uso profesional</span>
-          <small>Dos personas en reunión y una utiliza We Flick</small>
+        <div class="para-quien__visual">
+          <div class="perfiles" data-perfiles aria-roledescription="carousel" aria-label="Perfiles profesionales que usan We Flick">
+            <div class="perfiles__viewport">
+              <div class="perfiles__track" data-track>
+                <article class="perfiles__slide is-active" data-slide="1" aria-roledescription="slide" aria-label="1 de 5">
+                  <div class="perfiles__media">
+                    <span class="perfiles__glow" aria-hidden="true"></span>
+                    <div class="placeholder placeholder--perfil" data-id="F10">
+                      <span>F10 · Agente inmobiliario</span>
+                      <small>Mockup 4:3 · 1600×1200 px</small>
+                    </div>
+                  </div>
+                  <div class="perfiles__body">
+                    <span class="perfiles__badge">Business Card Custom</span>
+                    <h3 class="perfiles__title">Agente inmobiliario</h3>
+                    <p class="perfiles__subtitle">Asesor inmobiliario · Barcelona</p>
+                    <p class="perfiles__desc">Comparte su contacto y propiedades después de cada visita.</p>
+                  </div>
+                </article>
+                <article class="perfiles__slide" data-slide="2" aria-roledescription="slide" aria-label="2 de 5">
+                  <div class="perfiles__media">
+                    <span class="perfiles__glow" aria-hidden="true"></span>
+                    <div class="placeholder placeholder--perfil" data-id="F11">
+                      <span>F11 · Consultoría</span>
+                      <small>Mockup 4:3 · 1600×1200 px</small>
+                    </div>
+                  </div>
+                  <div class="perfiles__body">
+                    <span class="perfiles__badge">Business Card</span>
+                    <h3 class="perfiles__title">Consultora independiente</h3>
+                    <p class="perfiles__subtitle">Consultoría estratégica · Madrid</p>
+                    <p class="perfiles__desc">Centraliza contacto, LinkedIn y web en un solo perfil.</p>
+                  </div>
+                </article>
+                <article class="perfiles__slide" data-slide="3" aria-roledescription="slide" aria-label="3 de 5">
+                  <div class="perfiles__media">
+                    <span class="perfiles__glow" aria-hidden="true"></span>
+                    <div class="placeholder placeholder--perfil" data-id="F12">
+                      <span>F12 · Recruiting</span>
+                      <small>Mockup 4:3 · 1600×1200 px</small>
+                    </div>
+                  </div>
+                  <div class="perfiles__body">
+                    <span class="perfiles__badge">Business Card</span>
+                    <h3 class="perfiles__title">Recruiter</h3>
+                    <p class="perfiles__subtitle">Recruiting · Talent Acquisition</p>
+                    <p class="perfiles__desc">Comparte sus datos de forma rápida en eventos y entrevistas.</p>
+                  </div>
+                </article>
+                <article class="perfiles__slide" data-slide="4" aria-roledescription="slide" aria-label="4 de 5">
+                  <div class="perfiles__media">
+                    <span class="perfiles__glow" aria-hidden="true"></span>
+                    <div class="placeholder placeholder--perfil" data-id="F13">
+                      <span>F13 · Guías de free tours</span>
+                      <small>Mockup 4:3 · 1600×1200 px</small>
+                    </div>
+                  </div>
+                  <div class="perfiles__body">
+                    <span class="perfiles__badge">Business Card Custom</span>
+                    <h3 class="perfiles__title">Guía de free tours</h3>
+                    <p class="perfiles__subtitle">Tours guiados · Business Card Custom</p>
+                    <p class="perfiles__desc">Facilita a los viajeros guardar su contacto y redes al final del recorrido.</p>
+                  </div>
+                </article>
+                <article class="perfiles__slide" data-slide="5" aria-roledescription="slide" aria-label="5 de 5">
+                  <div class="perfiles__media">
+                    <span class="perfiles__glow" aria-hidden="true"></span>
+                    <div class="placeholder placeholder--perfil" data-id="F14">
+                      <span>F14 · Ventas B2B</span>
+                      <small>Mockup 4:3 · 1600×1200 px</small>
+                    </div>
+                  </div>
+                  <div class="perfiles__body">
+                    <span class="perfiles__badge">Business Card</span>
+                    <h3 class="perfiles__title">Ventas y desarrollo de negocio</h3>
+                    <p class="perfiles__subtitle">Business Development · B2B</p>
+                    <p class="perfiles__desc">Hace más fácil compartir contacto y hacer seguimiento tras cada reunión.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="perfiles__controls">
+              <button type="button" class="perfiles__arrow perfiles__arrow--prev" data-prev aria-label="Perfil anterior">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="perfiles__dots" role="tablist" aria-label="Seleccionar perfil">
+                <button type="button" class="perfiles__dot is-active" data-dot="0" role="tab" aria-selected="true" aria-label="Ir al perfil 1"></button>
+                <button type="button" class="perfiles__dot" data-dot="1" role="tab" aria-selected="false" aria-label="Ir al perfil 2"></button>
+                <button type="button" class="perfiles__dot" data-dot="2" role="tab" aria-selected="false" aria-label="Ir al perfil 3"></button>
+                <button type="button" class="perfiles__dot" data-dot="3" role="tab" aria-selected="false" aria-label="Ir al perfil 4"></button>
+                <button type="button" class="perfiles__dot" data-dot="4" role="tab" aria-selected="false" aria-label="Ir al perfil 5"></button>
+              </div>
+              <button type="button" class="perfiles__arrow perfiles__arrow--next" data-next aria-label="Perfil siguiente">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -217,19 +310,16 @@
           <h2 class="section-title">We Flick Business Card</h2>
           <p class="precio">19,90 € <span>IVA incluido</span></p>
           <p>Una tarjeta reutilizable conectada a tu perfil digital.</p>
-          <!-- TODO: reemplazar por el Payment Link real de Stripe -->
-          <a href="#" class="btn btn--primary btn--lg" data-cta="stripe-checkout">Comprar ahora</a>
+          <a href="https://buy.stripe.com/fZu28rfyUb3SdbM4NP93y0X" class="btn btn--primary btn--lg" data-cta="stripe-checkout" target="_blank" rel="noopener">Comprar ahora</a>
           <p class="producto__equipos">
             ¿Necesitas 5 o más?
-            <!-- TODO: reemplazar por el número real de WhatsApp Business -->
-            <a href="https://wa.me/000000000?text=Hola%2C%20quiero%20tarjetas%20We%20Flick%20para%20mi%20equipo" data-cta="whatsapp">Escríbenos por WhatsApp</a>.
+            <a href="https://wa.me/34695287032?text=Hola%2C%20quiero%20tarjetas%20We%20Flick%20para%20mi%20equipo" data-cta="whatsapp" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>.
           </p>
 
           <div class="producto__custom">
             <h3>We Flick Business Card Custom</h3>
             <p>Desde 29,90 € · Personalización con logo, nombre y colores de marca. Gestionado por WhatsApp.</p>
-            <!-- TODO: reemplazar por el número real de WhatsApp Business -->
-            <a href="https://wa.me/000000000?text=Hola%2C%20quiero%20una%20tarjeta%20We%20Flick%20personalizada" class="btn btn--outline" data-cta="whatsapp">Consultar Custom</a>
+            <a href="https://wa.me/34695287032?text=Hola%2C%20quiero%20personalizar%20una%20Business%20Card" class="btn btn--outline" data-cta="whatsapp" target="_blank" rel="noopener">Consultar Custom</a>
           </div>
         </div>
       </div>
@@ -310,10 +400,8 @@
       <div class="container cierre__inner">
         <h2>Tu próxima presentación puede empezar con un toque.</h2>
         <div class="cierre__ctas">
-          <!-- TODO: reemplazar por el Payment Link real de Stripe -->
-          <a href="#" class="btn btn--primary btn--lg" data-cta="stripe-checkout">Quiero mi Business Card We Flick</a>
-          <!-- TODO: reemplazar por el número real de WhatsApp Business -->
-          <a href="https://wa.me/000000000?text=Hola%2C%20tengo%20una%20duda%20sobre%20We%20Flick%20Business%20Card" class="btn btn--outline btn--lg" data-cta="whatsapp">Tengo una duda · WhatsApp</a>
+          <a href="https://buy.stripe.com/fZu28rfyUb3SdbM4NP93y0X" class="btn btn--primary btn--lg" data-cta="stripe-checkout" target="_blank" rel="noopener">Quiero mi Business Card We Flick</a>
+          <a href="https://wa.me/34695287032?text=Hola%2C%20tengo%20una%20duda%20sobre%20We%20Flick%20Business%20Card" class="btn btn--outline btn--lg" data-cta="whatsapp" target="_blank" rel="noopener">Tengo una duda · WhatsApp</a>
         </div>
       </div>
     </section>
