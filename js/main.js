@@ -2,16 +2,42 @@
 const navToggle = document.getElementById('navToggle');
 const nav = document.getElementById('nav');
 
-navToggle.addEventListener('click', () => {
+const closeMobileNav = () => {
+  nav.classList.remove('is-open');
+  navToggle.setAttribute('aria-expanded', 'false');
+};
+
+navToggle.addEventListener('click', (event) => {
+  event.stopPropagation();
   const isOpen = nav.classList.toggle('is-open');
   navToggle.setAttribute('aria-expanded', String(isOpen));
 });
 
 nav.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    nav.classList.remove('is-open');
-    navToggle.setAttribute('aria-expanded', 'false');
-  });
+  link.addEventListener('click', closeMobileNav);
+});
+
+// Cerrar al hacer scroll
+window.addEventListener('scroll', () => {
+  if (nav.classList.contains('is-open')) closeMobileNav();
+}, { passive: true });
+
+// Cerrar al tocar fuera del menú y del botón
+document.addEventListener('click', (event) => {
+  if (
+    nav.classList.contains('is-open') &&
+    !nav.contains(event.target) &&
+    !navToggle.contains(event.target)
+  ) {
+    closeMobileNav();
+  }
+});
+
+// Cerrar con Escape
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && nav.classList.contains('is-open')) {
+    closeMobileNav();
+  }
 });
 
 // FAQ acordeón
@@ -33,7 +59,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const coloresSection = document.querySelector('[data-colores]');
 if (coloresSection) {
   const variants = {
-    negro:   { name: 'Negro',   desc: 'Sobria, minimal y profesional.',        src: 'assets/img/f06-negro.jpg',   alt: 'Tarjeta We Flick negra, frente y dorso' },
+    negro:   { name: 'Negro',   desc: 'Sobria, minimalista y profesional.',    src: 'assets/img/f06-negro.jpg',   alt: 'Tarjeta We Flick negra, frente y dorso' },
     violeta: { name: 'Violeta', desc: 'El color más reconocible de We Flick.', src: 'assets/img/f07-violeta.jpg', alt: 'Tarjeta We Flick violeta, frente y dorso' },
     blanco:  { name: 'Blanco',  desc: 'Limpia, luminosa y versátil.',          src: 'assets/img/f08-blanco.jpg',  alt: 'Tarjeta We Flick blanca, frente y dorso' }
   };
