@@ -1102,7 +1102,7 @@ ul { padding: 0; margin: 0; list-style: none; }
 }
 .footer__brand .footer__social {
   display: flex;
-  margin-top: 14px;
+  margin-top: 28px;
   margin-left: -8px;
 }
 .footer__social a {
