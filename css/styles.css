@@ -1095,6 +1095,36 @@ ul { padding: 0; margin: 0; list-style: none; }
 .footer__legal a:hover { color: var(--violet); }
 .footer__legal span { opacity: 0.5; }
 
+.footer__social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer__social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-500);
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+.footer__social a:hover {
+  color: var(--violet);
+  background: rgba(127, 53, 252, 0.06);
+  transform: translateY(-1px);
+}
+.footer__social a:focus-visible {
+  outline: 2px solid var(--violet);
+  outline-offset: 2px;
+}
+.footer__social svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
 /* Páginas legales */
 .legal-page { padding: 64px 24px 80px; background: var(--white); }
 .legal-page__container {
