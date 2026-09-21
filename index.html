@@ -27,7 +27,7 @@
 
       <div class="header__actions">
         <a href="https://weflick.es/auth/login" class="btn btn--ghost">Iniciar sesión</a>
-        <a href="https://buy.stripe.com/fZu28rfyUb3SdbM4NP93y0X" class="btn btn--primary" data-cta="stripe-checkout" target="_blank" rel="noopener">Quiero mi Business Card</a>
+        <a href="https://buy.stripe.com/fZu28rfyUb3SdbM4NP93y0X" class="btn btn--primary" data-cta="stripe-checkout" data-wf-track="buy_click" data-wf-location="header" target="_blank" rel="noopener">Quiero mi Business Card</a>
       </div>
     </div>
   </header>
@@ -35,7 +35,7 @@
   <main>
 
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero" data-wf-section="hero">
       <div class="container hero__inner">
         <div class="hero__copy">
           <h1>Comparte tu información profesional con un toque.</h1>
@@ -44,7 +44,7 @@
             NFC + QR + contacto + enlaces, todo en un solo lugar.
           </p>
           <div class="hero__ctas">
-            <a href="https://buy.stripe.com/fZu28rfyUb3SdbM4NP93y0X" class="btn btn--primary btn--lg" data-cta="stripe-checkout" target="_blank" rel="noopener">Comprar por 19,90 €</a>
+            <a href="https://buy.stripe.com/fZu28rfyUb3SdbM4NP93y0X" class="btn btn--primary btn--lg" data-cta="stripe-checkout" data-wf-track="buy_click" data-wf-location="hero" target="_blank" rel="noopener">Comprar por 19,90 €</a>
             <a href="#como-funciona" class="btn btn--outline btn--lg">Ver cómo funciona</a>
           </div>
           <p class="hero__microcopy">NFC + QR · Sin app para quien recibe tu información.</p>
@@ -56,7 +56,7 @@
     </section>
 
     <!-- Problema / cambio -->
-    <section class="problema">
+    <section class="problema" data-wf-section="problema">
       <div class="container problema__inner">
         <h2>Tu información cambia. Tu tarjeta no debería quedarse vieja.</h2>
         <p>
@@ -67,7 +67,7 @@
     </section>
 
     <!-- Cómo funciona -->
-    <section class="como-funciona" id="como-funciona">
+    <section class="como-funciona" id="como-funciona" data-wf-section="como-funciona">
       <div class="como-funciona__bg" aria-hidden="true"></div>
       <div class="container">
         <div class="como-funciona__header" data-reveal>
@@ -139,7 +139,7 @@
     </section>
 
     <!-- Qué incluye -->
-    <section class="que-incluye" id="que-incluye">
+    <section class="que-incluye" id="que-incluye" data-wf-section="que-incluye">
       <div class="container que-incluye__inner">
         <div class="que-incluye__visual">
           <img src="assets/img/f03-tarjeta-trasera.jpg" alt="Tarjeta We Flick Business Card negra, vista trasera con NFC y QR" class="que-incluye__image" />
@@ -161,7 +161,7 @@
     </section>
 
     <!-- Colores -->
-    <section class="colores colores--negro" id="colores" data-colores>
+    <section class="colores colores--negro" id="colores" data-colores data-wf-section="colores">
       <span class="colores__halo" aria-hidden="true"></span>
       <div class="container colores__inner">
         <div class="colores__copy">
@@ -174,15 +174,15 @@
           </div>
 
           <div class="colores__selector" role="group" aria-label="Selector de color">
-            <button type="button" class="colores__pill is-selected" data-color="negro" aria-pressed="true" aria-label="Seleccionar tarjeta negra">
+            <button type="button" class="colores__pill is-selected" data-color="negro" data-wf-track="color_selected" data-wf-color="negro" aria-pressed="true" aria-label="Seleccionar tarjeta negra">
               <span class="colores__pill-swatch swatch--negro" aria-hidden="true"></span>
               <span class="colores__pill-name">Negro</span>
             </button>
-            <button type="button" class="colores__pill" data-color="violeta" aria-pressed="false" aria-label="Seleccionar tarjeta violeta">
+            <button type="button" class="colores__pill" data-color="violeta" data-wf-track="color_selected" data-wf-color="violeta" aria-pressed="false" aria-label="Seleccionar tarjeta violeta">
               <span class="colores__pill-swatch swatch--violeta" aria-hidden="true"></span>
               <span class="colores__pill-name">Violeta</span>
             </button>
-            <button type="button" class="colores__pill" data-color="blanco" aria-pressed="false" aria-label="Seleccionar tarjeta blanca">
+            <button type="button" class="colores__pill" data-color="blanco" data-wf-track="color_selected" data-wf-color="blanco" aria-pressed="false" aria-label="Seleccionar tarjeta blanca">
               <span class="colores__pill-swatch swatch--blanco" aria-hidden="true"></span>
               <span class="colores__pill-name">Blanco</span>
             </button>
@@ -203,19 +203,19 @@
     </section>
 
     <!-- Para quién -->
-    <section class="para-quien" id="para-quien">
+    <section class="para-quien" id="para-quien" data-wf-section="para-quien">
       <div class="container para-quien__inner">
         <div class="para-quien__copy">
           <p class="para-quien__eyebrow">Casos de uso</p>
           <h2 class="section-title">Hecha para profesionales que conocen gente todos los días.</h2>
           <ul class="tags">
-            <li><button type="button" class="tags__btn" data-slide-target="5">Ventas y desarrollo de negocio</button></li>
-            <li><button type="button" class="tags__btn" data-slide-target="1">Inmobiliarias</button></li>
-            <li><button type="button" class="tags__btn" data-slide-target="2">Consultoría</button></li>
-            <li><button type="button" class="tags__btn" data-slide-target="3">Recruiting</button></li>
-            <li><button type="button" class="tags__btn" data-slide-target="5">Autónomos y profesionales B2B</button></li>
-            <li><button type="button" class="tags__btn" data-slide-target="3">Ferias, congresos y networking</button></li>
-            <li><button type="button" class="tags__btn" data-slide-target="4" title="Comparte tu contacto y redes con las personas que conoces durante cada recorrido.">Guías de free tours</button></li>
+            <li><button type="button" class="tags__btn" data-slide-target="5" data-wf-track="audience_selected" data-wf-audience="ventas-b2b">Ventas y desarrollo de negocio</button></li>
+            <li><button type="button" class="tags__btn" data-slide-target="1" data-wf-track="audience_selected" data-wf-audience="inmobiliarias">Inmobiliarias</button></li>
+            <li><button type="button" class="tags__btn" data-slide-target="2" data-wf-track="audience_selected" data-wf-audience="consultoria">Consultoría</button></li>
+            <li><button type="button" class="tags__btn" data-slide-target="3" data-wf-track="audience_selected" data-wf-audience="recruiting">Recruiting</button></li>
+            <li><button type="button" class="tags__btn" data-slide-target="5" data-wf-track="audience_selected" data-wf-audience="autonomos">Autónomos y profesionales B2B</button></li>
+            <li><button type="button" class="tags__btn" data-slide-target="3" data-wf-track="audience_selected" data-wf-audience="ferias">Ferias, congresos y networking</button></li>
+            <li><button type="button" class="tags__btn" data-slide-target="4" data-wf-track="audience_selected" data-wf-audience="free-tours" title="Comparte tu contacto y redes con las personas que conoces durante cada recorrido.">Guías de free tours</button></li>
           </ul>
         </div>
         <div class="para-quien__visual">
@@ -305,7 +305,7 @@
     </section>
 
     <!-- Producto y precio -->
-    <section class="producto" id="producto">
+    <section class="producto" id="producto" data-wf-section="producto">
       <div class="container producto__inner">
         <img src="assets/img/f02-tarjeta-frontal.jpg" alt="Tarjeta We Flick Business Card negra, vista frontal" class="producto__image" />
 
@@ -314,84 +314,114 @@
           <p class="precio">19,90 € <span>IVA incluido</span></p>
           <p class="precio-incluye">Envío y 12 meses de acceso al perfil digital incluidos.</p>
           <p>Una tarjeta reutilizable conectada a tu perfil digital.</p>
-          <a href="https://buy.stripe.com/fZu28rfyUb3SdbM4NP93y0X" class="btn btn--primary btn--lg" data-cta="stripe-checkout" target="_blank" rel="noopener">Comprar ahora</a>
+          <a href="https://buy.stripe.com/fZu28rfyUb3SdbM4NP93y0X" class="btn btn--primary btn--lg" data-cta="stripe-checkout" data-wf-track="buy_click" data-wf-location="producto" target="_blank" rel="noopener">Comprar ahora</a>
           <p class="producto__equipos">
             ¿Necesitas 5 o más?
-            <a href="https://wa.me/34695287032?text=Hola%2C%20quiero%20tarjetas%20We%20Flick%20para%20mi%20equipo" data-cta="whatsapp" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>.
+            <a href="https://wa.me/34695287032?text=Hola%2C%20quiero%20tarjetas%20We%20Flick%20para%20mi%20equipo" data-cta="whatsapp" data-wf-track="whatsapp_click" data-wf-location="producto-equipos" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>.
           </p>
 
           <div class="producto__custom">
             <h3>We Flick Business Card Custom</h3>
             <p>Desde 29,90 € · Personalización con logo, nombre y colores de marca. Gestionado por WhatsApp.</p>
-            <a href="https://wa.me/34695287032?text=Hola%2C%20quiero%20personalizar%20una%20Business%20Card" class="btn btn--outline" data-cta="whatsapp" target="_blank" rel="noopener">Consultar Custom</a>
+            <a href="https://wa.me/34695287032?text=Hola%2C%20quiero%20personalizar%20una%20Business%20Card" class="btn btn--outline" data-cta="whatsapp" data-wf-track="custom_click" data-wf-location="producto" target="_blank" rel="noopener">Consultar Custom</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="faq" id="preguntas">
+    <section class="faq" id="preguntas" data-wf-section="faq">
       <div class="container">
         <h2 class="section-title section-title--center">Preguntas frecuentes</h2>
         <div class="faq__list">
 
           <div class="faq__item">
-            <button class="faq__question">
-              ¿La otra persona necesita una app?
+            <button class="faq__question" data-wf-track="faq_open" data-wf-question="app-needed">
+              ¿La otra persona necesita instalar una app?
               <span class="faq__icon">+</span>
             </button>
             <div class="faq__answer">
-              <p>No. El perfil se abre en el navegador del móvil.</p>
+              <p>No. Tu perfil se abre directamente en el navegador del móvil.</p>
             </div>
           </div>
 
           <div class="faq__item">
-            <button class="faq__question">
-              ¿Funciona si el móvil no usa NFC?
+            <button class="faq__question" data-wf-track="faq_open" data-wf-question="no-nfc">
+              ¿Qué pasa si el móvil no tiene NFC?
               <span class="faq__icon">+</span>
             </button>
             <div class="faq__answer">
-              <p>Sí. El QR permite acceder al mismo perfil.</p>
+              <p>Puedes compartir exactamente el mismo perfil mediante el código QR de la tarjeta.</p>
             </div>
           </div>
 
           <div class="faq__item">
-            <button class="faq__question">
+            <button class="faq__question" data-wf-track="faq_open" data-wf-question="edit-info">
               ¿Puedo cambiar mis datos después?
               <span class="faq__icon">+</span>
             </button>
             <div class="faq__answer">
-              <p>Sí. Puedes actualizar la información del perfil sin cambiar la tarjeta.</p>
+              <p>Sí. Puedes actualizar tu información, enlaces y contacto desde tu perfil sin cambiar ni reimprimir la tarjeta.</p>
             </div>
           </div>
 
           <div class="faq__item">
-            <button class="faq__question">
-              ¿Qué puedo añadir al perfil?
+            <button class="faq__question" data-wf-track="faq_open" data-wf-question="price-includes">
+              ¿Qué incluye el precio de 19,90 €?
               <span class="faq__icon">+</span>
             </button>
             <div class="faq__answer">
-              <p>Foto, descripción, enlaces y vCard/contacto.</p>
+              <p>Incluye la Business Card física con NFC y QR, el envío en España y 12 meses de acceso al perfil digital.</p>
             </div>
           </div>
 
           <div class="faq__item">
-            <button class="faq__question">
-              ¿Incluye suscripción?
+            <button class="faq__question" data-wf-track="faq_open" data-wf-question="shipping-time">
+              ¿Cuánto tarda en llegar?
               <span class="faq__icon">+</span>
             </button>
             <div class="faq__answer">
-              <p>La Business Card incluye 12 meses de acceso al perfil digital.</p>
+              <p>El plazo estimado de entrega es de 2 a 6 días laborables dentro de España.</p>
             </div>
           </div>
 
           <div class="faq__item">
-            <button class="faq__question">
-              ¿Sirve para equipos?
+            <button class="faq__question" data-wf-track="faq_open" data-wf-question="after-12-months">
+              ¿Qué pasa después de los 12 meses?
               <span class="faq__icon">+</span>
             </button>
             <div class="faq__answer">
-              <p>Sí. Los pedidos de 5 o más unidades se gestionan por WhatsApp para adaptar precio y operativa.</p>
+              <p>No hay renovación ni cargos automáticos. Si quieres seguir utilizando el perfil, podrás contratar un nuevo periodo y conocerás el precio antes de decidir.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" data-wf-track="faq_open" data-wf-question="customize">
+              ¿Puedo personalizar mi Business Card?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>Sí. La versión Custom permite personalizarla con tu logo, nombre y colores de marca. Se gestiona directamente por WhatsApp.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" data-wf-track="faq_open" data-wf-question="bulk">
+              ¿Necesito varias tarjetas?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>Para pedidos de 5 o más unidades, escríbenos por WhatsApp y te indicaremos las opciones y el precio según la cantidad.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" data-wf-track="faq_open" data-wf-question="after-purchase">
+              ¿Qué pasa después de comprar?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>Una vez realizado el pedido, recibirás la confirmación y los pasos para crear y activar tu perfil digital. Después podrás completar tus datos y dejar tu Business Card lista para usar.</p>
             </div>
           </div>
 
@@ -400,12 +430,12 @@
     </section>
 
     <!-- Cierre -->
-    <section class="cierre">
+    <section class="cierre" data-wf-section="cierre">
       <div class="container cierre__inner">
         <h2>Tu próxima presentación puede empezar con un toque.</h2>
         <div class="cierre__ctas">
-          <a href="https://buy.stripe.com/fZu28rfyUb3SdbM4NP93y0X" class="btn btn--primary btn--lg" data-cta="stripe-checkout" target="_blank" rel="noopener">Quiero mi Business Card We Flick</a>
-          <a href="https://wa.me/34695287032?text=Hola%2C%20tengo%20una%20duda%20sobre%20We%20Flick%20Business%20Card" class="btn btn--outline btn--lg" data-cta="whatsapp" target="_blank" rel="noopener">Tengo una duda · WhatsApp</a>
+          <a href="https://buy.stripe.com/fZu28rfyUb3SdbM4NP93y0X" class="btn btn--primary btn--lg" data-cta="stripe-checkout" data-wf-track="buy_click" data-wf-location="final" target="_blank" rel="noopener">Quiero mi Business Card We Flick</a>
+          <a href="https://wa.me/34695287032?text=Hola%2C%20tengo%20una%20duda%20sobre%20We%20Flick%20Business%20Card" class="btn btn--outline btn--lg" data-cta="whatsapp" data-wf-track="whatsapp_click" data-wf-location="final" target="_blank" rel="noopener">Tengo una duda · WhatsApp</a>
         </div>
       </div>
     </section>
@@ -446,8 +476,8 @@
         <div class="footer__col">
           <h3 class="footer__heading">We Flick</h3>
           <ul class="footer__links">
-            <li><a href="https://buy.stripe.com/fZu28rfyUb3SdbM4NP93y0X" target="_blank" rel="noopener" data-cta="stripe-checkout">Comprar Business Card</a></li>
-            <li><a href="https://wa.me/34695287032?text=Hola%2C%20quiero%20personalizar%20una%20Business%20Card" target="_blank" rel="noopener" data-cta="whatsapp">Personalizar tarjeta</a></li>
+            <li><a href="https://buy.stripe.com/fZu28rfyUb3SdbM4NP93y0X" target="_blank" rel="noopener" data-cta="stripe-checkout" data-wf-track="buy_click" data-wf-location="footer">Comprar Business Card</a></li>
+            <li><a href="https://wa.me/34695287032?text=Hola%2C%20quiero%20personalizar%20una%20Business%20Card" target="_blank" rel="noopener" data-cta="whatsapp" data-wf-track="custom_click" data-wf-location="footer">Personalizar tarjeta</a></li>
             <li><a href="https://weflick.es/auth/login">Iniciar sesión</a></li>
           </ul>
         </div>
@@ -475,6 +505,8 @@
       rel="noopener"
       class="whatsapp-float__link"
       data-cta="whatsapp"
+      data-wf-track="whatsapp_click"
+      data-wf-location="float"
       aria-label="Consultanos por WhatsApp"
     >
       <span class="whatsapp-float__label">Consultanos por WhatsApp</span>
@@ -487,5 +519,13 @@
   </div>
 
   <script src="js/main.js"></script>
+
+  <!-- WeFlick Analytics tracker -->
+  <script
+    src="https://weflick-analytics.vercel.app/tracker.js"
+    data-wf-site="business-card"
+    data-wf-version="1.0-live"
+    async
+  ></script>
 </body>
 </html>
